@@ -1,0 +1,11 @@
+# Arquivos locais e credenciais (nunca publicar)
+.env
+.env.*
+!.env.example
+.vercel/
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+*.log
+*.local
