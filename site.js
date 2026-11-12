@@ -1,4 +1,3 @@
-/* VisionMove: controles de navegação e disponibilidade do Android */
 (() => {
   "use strict";
   const button = document.querySelector(".menu-button");
@@ -39,7 +38,6 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // Quando houver uma versão do app publicada, coloque aqui o link HTTPS.
   const ANDROID_DOWNLOAD_URL = "";
   const downloadButton = document.querySelector('[data-link="android"]');
   if (downloadButton && /^https:\/\/[^\s]+$/i.test(ANDROID_DOWNLOAD_URL)) {

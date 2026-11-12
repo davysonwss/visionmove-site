@@ -1,8 +1,6 @@
-/* Envio de feedbacks privados e inscrições, somente pelo backend Vercel. */
 (() => {
   "use strict";
 
-  // Diálogos nativos: foco preso dentro do modal e Escape para fechar.
   const dialogs = new Map([
     ["feedback", document.getElementById("feedback-dialog")],
     ["interessados", document.getElementById("interessados-dialog")]

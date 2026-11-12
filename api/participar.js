@@ -1,6 +1,3 @@
-/* VisionMove public form relay (Vercel -> Supabase Edge Function).
-   All private database credentials are held in the Supabase Edge runtime,
-   never in the website source or client-side JS. */
 "use strict";
 module.exports = async (req, res) => {
   res.setHeader("Cache-Control", "no-store");
