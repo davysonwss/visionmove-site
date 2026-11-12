@@ -38,17 +38,4 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  const ANDROID_DOWNLOAD_URL = "";
-  const downloadButton = document.querySelector('[data-link="android"]');
-  if (downloadButton && /^https:\/\/[^\s]+$/i.test(ANDROID_DOWNLOAD_URL)) {
-    const downloadLink = document.createElement("a");
-    downloadLink.className = "button outline access-link";
-    downloadLink.href = ANDROID_DOWNLOAD_URL;
-    downloadLink.target = "_blank";
-    downloadLink.rel = "noopener noreferrer";
-    downloadLink.textContent = "Baixar aplicativo Android";
-    downloadLink.setAttribute("aria-label", "Baixar aplicativo Android (abre em nova aba)");
-    document.getElementById("android-disponibilidade").textContent = "Versão do aplicativo Android disponível para download.";
-    downloadButton.replaceWith(downloadLink);
-  }
 })();
