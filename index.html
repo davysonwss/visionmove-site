@@ -134,27 +134,27 @@
   </div>
 </dialog>
 </main>
-<!-- Modal da votação pública do Demoday.
-     Mantido inativo no acesso normal até haver um link HTTPS no arquivo votacao-config.js. -->
+<!-- Modal de convite à votação do Demoday; link oficial configurável em votacao-config.js. -->
 <dialog id="demoday-voting-dialog" class="demoday-voting-dialog" aria-labelledby="demoday-voting-title" aria-describedby="demoday-voting-description">
   <div class="demoday-voting-content">
     <button class="demoday-voting-close" type="button" data-close-demoday-voting aria-label="Fechar aviso de votação">×</button>
     <img class="demoday-voting-logo" src="assets/logo-visionmove.png" alt="VisionMove">
-    <p class="demoday-voting-kicker">DEMODAY · VOTAÇÃO PÚBLICA</p>
-    <h2 id="demoday-voting-title">Seu voto pode fazer a diferença.</h2>
-    <p id="demoday-voting-description" class="demoday-voting-description">O VisionMove participa do Demoday! A votação pública representa <strong>20% da nota</strong> do evento. Se você apoia nossa proposta de mobilidade mais acessível, participe da votação.</p>
+    <p class="demoday-voting-kicker">VISIONMOVE · DEMODAY</p>
+    <h2 id="demoday-voting-title">Juntos por uma mobilidade mais acessível.</h2>
+    <p id="demoday-voting-description" class="demoday-voting-description">O VisionMove está participando do Demoday! Seu voto pode ajudar a impulsionar uma tecnologia que busca promover mais autonomia e inclusão para pessoas com deficiência visual.</p>
     <div class="demoday-voting-details">
-      <div class="demoday-voting-percentage" aria-label="A votação pública representa vinte por cento da avaliação">
-        <strong aria-hidden="true">20%</strong>
-        <span>da nota vem da votação pública</span>
+      <div class="demoday-voting-impact">
+        <svg class="demoday-voting-impact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6l1.2 1.2L12 21l7.6-7.6 1.2-1.2a5.4 5.4 0 0 0 0-7.6Z"/></svg>
+        <strong>Sua participação faz a diferença!</strong>
       </div>
       <div class="demoday-voting-qr-area" id="demoday-voting-qr-area" hidden>
         <img id="demoday-voting-qr" alt="QR Code para acessar a votação pública do Demoday" width="132" height="132">
         <span>Ou escaneie o QR Code</span>
       </div>
     </div>
-    <a id="demoday-voting-link" class="button primary demoday-voting-link" href="" target="_blank" rel="noopener noreferrer" hidden>Ir para a votação <span class="sr-only">(abre em nova aba)</span></a>
-    <button id="demoday-voting-unavailable" class="button demoday-voting-unavailable" type="button" disabled hidden>Aguardando link oficial</button>
+    <a id="demoday-voting-link" class="button primary demoday-voting-link" href="" target="_blank" rel="noopener noreferrer" hidden>VOTAR NO VISIONMOVE <span class="sr-only">(abre em nova aba)</span></a>
+    <button id="demoday-voting-unavailable" class="button primary demoday-voting-unavailable" type="button" disabled aria-describedby="demoday-voting-pending" hidden>VOTAR NO VISIONMOVE</button>
+    <p id="demoday-voting-pending" class="demoday-voting-pending" hidden>A votação será liberada assim que recebermos o link oficial do evento.</p>
     <p class="demoday-voting-note">A votação acontece em uma página externa do evento. O VisionMove não coleta votos neste site.</p>
     <button class="demoday-voting-later" type="button" data-close-demoday-voting>Agora não, continuar no site</button>
   </div>
