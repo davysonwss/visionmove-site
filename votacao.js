@@ -4,6 +4,7 @@
   const dialog = document.getElementById("demoday-voting-dialog");
   const link = document.getElementById("demoday-voting-link");
   const unavailable = document.getElementById("demoday-voting-unavailable");
+  const pending = document.getElementById("demoday-voting-pending");
   const qrArea = document.getElementById("demoday-voting-qr-area");
   const qrImage = document.getElementById("demoday-voting-qr");
   const reopen = document.getElementById("demoday-voting-reopen");
@@ -34,25 +35,30 @@
   }
 
   const url = externalHttpsAddress(settings.url);
-  const active = settings.enabled === true && !!url;
-  if (!active && !preview) return;
+  const visible = settings.enabled === true;
+  const active = visible && !!url;
+  if (!visible && !preview) return;
+  reopen.hidden = false;
 
   if (active) {
     link.href = url;
     link.hidden = false;
     unavailable.hidden = true;
-    reopen.hidden = false;
+    if (pending) pending.hidden = true;
     const qr = safeImageAddress(settings.qrImage);
     if (qr && qrArea && qrImage) {
       qrImage.src = qr;
       qrArea.hidden = false;
     }
   } else {
+    link.removeAttribute("href");
     link.hidden = true;
     unavailable.hidden = false;
+    if (pending) pending.hidden = false;
   }
 
-  const storageKey = "visionmove-demoday-voting-seen-v1";
+  // Ao receber o link, quem já viu o convite poderá receber o aviso de votação ativa.
+  const storageKey = active ? "visionmove-demoday-voting-link-live-v1" : "visionmove-demoday-voting-coming-soon-v1";
   const seen = () => {
     try { return window.sessionStorage.getItem(storageKey) === "1"; }
     catch { return false; }
@@ -69,7 +75,7 @@
     dialog.showModal();
     document.body.classList.add("demoday-voting-open");
     reopen.hidden = true;
-    if (active && !preview) markSeen();
+    if (!preview) markSeen();
     dialog.querySelector("[data-close-demoday-voting]")?.focus();
   }
 
@@ -85,13 +91,13 @@
   });
   dialog.addEventListener("close", () => {
     document.body.classList.remove("demoday-voting-open");
-    if (active) reopen.hidden = false;
+    if (visible || preview) reopen.hidden = false;
     if (openFromButton) reopen.focus({ preventScroll: true });
     openFromButton = false;
   });
   reopen.addEventListener("click", () => openVoting(true));
 
   // A prévia é sempre aberta quando solicitada via parâmetro.
-  // Na versão pública ativa, abre uma vez por sessão para não interromper o visitante repetidamente.
+  // Abre uma vez por sessão, mesmo sem link, e permite reabrir a qualquer momento.
   if (preview || !seen()) openVoting(false);
 })();
