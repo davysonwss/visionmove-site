@@ -4,7 +4,6 @@
   const dialog = document.getElementById("demoday-voting-dialog");
   const link = document.getElementById("demoday-voting-link");
   const unavailable = document.getElementById("demoday-voting-unavailable");
-  const pending = document.getElementById("demoday-voting-pending");
   const qrArea = document.getElementById("demoday-voting-qr-area");
   const qrImage = document.getElementById("demoday-voting-qr");
   const reopen = document.getElementById("demoday-voting-reopen");
@@ -44,7 +43,6 @@
     link.href = url;
     link.hidden = false;
     unavailable.hidden = true;
-    if (pending) pending.hidden = true;
     const qr = safeImageAddress(settings.qrImage);
     if (qr && qrArea && qrImage) {
       qrImage.src = qr;
@@ -54,7 +52,6 @@
     link.removeAttribute("href");
     link.hidden = true;
     unavailable.hidden = false;
-    if (pending) pending.hidden = false;
   }
 
   // Ao receber o link, quem já viu o convite poderá receber o aviso de votação ativa.
