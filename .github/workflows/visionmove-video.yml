@@ -1,0 +1,43 @@
+name: Renderizar vídeo conceitual VisionMove
+on:
+  push:
+    branches:
+      - visionmove-video-preview
+    paths:
+      - "video-preview/render.py"
+      - ".github/workflows/visionmove-video.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout do projeto
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Preparar dependências
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          python -m pip install --disable-pip-version-check pillow
+      - name: Montar vídeo com alerta e áudio
+        run: |
+          python video-preview/render.py
+      - name: Publicar artefato para download
+        uses: actions/upload-artifact@v4
+        with:
+          name: visionmove-video-completo-20s
+          path: |
+            video-preview/visionmove_demonstracao_conceitual_20s.mp4
+            video-preview/preview_contact_sheet.jpg
+          retention-days: 30
+      - name: Salvar prévia no ramo separado
+        run: |
+          git config user.email "actions@users.noreply.github.com"
+          git config user.name "VisionMove Video Render"
+          git add video-preview/visionmove_demonstracao_conceitual_20s.mp4 video-preview/preview_contact_sheet.jpg
+          git commit -m "assets: prévia de vídeo 20s com interface e alerta [skip ci]"
+          git push origin HEAD:visionmove-video-preview
