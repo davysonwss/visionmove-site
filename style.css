@@ -175,9 +175,9 @@ body.participation-modal-open{overflow:hidden}
   border:1px solid #39799d;border-radius:15px;
   background:#09243f;padding:16px 19px;margin-bottom:21px;
 }
-.demoday-voting-percentage{display:flex;flex-direction:column;gap:3px}
-.demoday-voting-percentage strong{font-size:clamp(38px,7vw,49px);font-weight:900;color:var(--cyan);line-height:1}
-.demoday-voting-percentage span{font-size:13px;line-height:1.5;color:#d2e6f5}
+.demoday-voting-impact{display:flex;align-items:center;gap:14px;min-width:0}
+.demoday-voting-impact-icon{width:34px;height:34px;flex:0 0 34px;color:var(--cyan)}
+.demoday-voting-impact strong{font-size:17px;line-height:1.45;color:#fff}
 .demoday-voting-qr-area{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;flex:0 0 140px}
 .demoday-voting-qr-area img{width:132px;height:132px;object-fit:contain;border:6px solid white;border-radius:9px;background:white}
 .demoday-voting-qr-area span{font-size:12px;color:#d2e6f5}
@@ -187,8 +187,10 @@ body.participation-modal-open{overflow:hidden}
 }
 .demoday-voting-dialog .demoday-voting-unavailable{
   color:#e0eaf3;background:#30465c;border:1px solid #72849c;cursor:not-allowed;
+  opacity:1;
 }
 .demoday-voting-dialog .demoday-voting-unavailable:hover{transform:none}
+.demoday-voting-pending{font-size:13px;color:#d7e9f6;line-height:1.6;text-align:center;margin:12px 0 4px}
 .demoday-voting-note{font-size:12px;color:#b6d0e4;line-height:1.6;margin:13px 0 14px}
 .demoday-voting-later{
   display:block;width:100%;min-height:44px;border:0;border-radius:10px;
@@ -217,7 +219,7 @@ body.demoday-voting-open{overflow:hidden}
   .demoday-voting-qr-area img{width:108px;height:108px}
   .demoday-voting-reopen{right:12px;bottom:12px}
 }
-@media(max-width:365px){.demoday-voting-details{flex-direction:column;align-items:flex-start}.demoday-voting-qr-area{align-self:center}}
+@media(max-width:365px){.demoday-voting-details{flex-direction:column;align-items:flex-start}.demoday-voting-qr-area{align-self:center}.demoday-voting-impact strong{font-size:16px}}
 @media(prefers-reduced-motion:reduce){.demoday-voting-dialog::backdrop{backdrop-filter:none}}
 @media(forced-colors:active){
   .demoday-voting-dialog,.demoday-voting-reopen,.demoday-voting-close{border:2px solid ButtonText}
