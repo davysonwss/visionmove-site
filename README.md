@@ -64,11 +64,11 @@ visionmove-site/
 └── vercel.json               # Configuração da publicação
 ```
 
-## Votação pública do Demoday (pré-configurada)
+## Votação pública do Demoday
 
-A landing page tem um modal de votação pronto para uso, mas **desativado por padrão** enquanto o evento não fornecer o link oficial. Isso impede que visitantes encontrem um botão sem destino.
+O convite de votação do VisionMove já está **visível automaticamente**, inclusive enquanto o endereço oficial ainda não foi divulgado. O botão **VOTAR NO VISIONMOVE** aparece desativado, com uma explicação. Quando houver link, o botão passará a abrir o formulário oficial em outra aba.
 
-Quando receber o link, abra **`votacao-config.js`** e altere somente as informações:
+Quando receber o link, abra `votacao-config.js` e preencha a propriedade `url`:
 
 ```js
 window.VISIONMOVE_VOTACAO = Object.freeze({
@@ -78,15 +78,16 @@ window.VISIONMOVE_VOTACAO = Object.freeze({
 });
 ```
 
-Não use o exemplo de link acima sem substituir pelo endereço oficial. Se não houver arquivo de QR Code, deixe `qrImage: ""` — o botão com o link é suficiente, especialmente no celular. Se receber o QR Code em imagem, é possível adicioná-lo em `assets/` e informar seu caminho em `qrImage`.
+Substitua o exemplo pela URL real do evento. Não é necessário alterar `enabled`, pois já está `true`. Se receber um QR Code como imagem, faça upload em `assets/` e preencha `qrImage`. Se não tiver QR Code, deixe vazio — o botão com link funciona no celular.
 
-- **Pré-visualizar antes da ativação:** `https://visionmove.vercel.app/?preview-votacao=1` (mostra o modal com botão desativado).
-- **No acesso normal:** só aparece automaticamente se `enabled` estiver ativado **e** a URL for HTTPS válida.
-- **Frequência:** abre uma vez por sessão de navegação; após fechar, pode ser reaberto pelo botão fixo "Votação pública".
-- **Acessibilidade:** diálogo nativo com foco, botão de fechar, tecla Esc, opção de continuar no site e descrição de saída para link externo.
-- **Resultado:** o visitante vota na página externa do Demoday; este site **não coleta votos**.
+- **Abertura automática:** uma vez por sessão de navegação, com ou sem URL, e pode ser reaberto pelo botão fixo "Votação pública".
+- **Ao receber o link:** visitantes que já viram a versão "em breve" podem receber o modal novamente para a votação ativa.
+- **Pré-visualização:** `https://visionmove.vercel.app/?preview-votacao=1` abre o modal mesmo se já foi visto na sessão.
+- **Depois do evento:** alterar `enabled` para `false` para desativar o convite.
+- **Acessibilidade:** diálogo nativo com foco, botão de fechar, tecla Esc, opção de continuar no site e descrição do link externo.
+- **Resultado:** a votação ocorre no serviço externo oficial, e o VisionMove não coleta votos neste site.
 
-Arquivos responsáveis: `index.html` (estrutura), `style.css` (aparência responsiva), `votacao.js` (interação), `votacao-config.js` (chave de ativação e endereço).
+Arquivos responsáveis: `index.html`, `equipe.html`, `style.css`, `votacao.js`, `votacao-config.js`.
 
 ## Privacidade e participação
 
