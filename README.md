@@ -18,7 +18,7 @@
 
 ## Sobre o VisionMove
 
-O **VisionMove** é um projeto de tecnologia assistiva voltado a pessoas cegas ou com baixa visão. A proposta é desenvolver um aplicativo Android conectado a uma câmera portátil, presa à roupa ou mochila, para analisar o ambiente com inteligência artificial e comunicar possíveis obstáculos por meio de alertas sonoros.
+O **VisionMove** é um projeto de tecnologia assistiva voltado a pessoas cegas ou com baixa visão. A proposta é desenvolver um aplicativo mobile conectado a uma câmera portátil, presa à roupa ou mochila, para analisar o ambiente com inteligência artificial e comunicar possíveis obstáculos por meio de alertas sonoros.
 
 O objetivo é oferecer **apoio complementar à mobilidade**, sem substituir a bengala, a orientação e mobilidade ou outros recursos de segurança.
 
