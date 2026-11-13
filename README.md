@@ -64,6 +64,30 @@ visionmove-site/
 └── vercel.json               # Configuração da publicação
 ```
 
+## Votação pública do Demoday (pré-configurada)
+
+A landing page tem um modal de votação pronto para uso, mas **desativado por padrão** enquanto o evento não fornecer o link oficial. Isso impede que visitantes encontrem um botão sem destino.
+
+Quando receber o link, abra **`votacao-config.js`** e altere somente as informações:
+
+```js
+window.VISIONMOVE_VOTACAO = Object.freeze({
+  enabled: true,
+  url: "https://LINK-OFICIAL-DA-VOTACAO",
+  qrImage: "" // opcional: "assets/qr-votacao.png" ou URL HTTPS da imagem
+});
+```
+
+Não use o exemplo de link acima sem substituir pelo endereço oficial. Se não houver arquivo de QR Code, deixe `qrImage: ""` — o botão com o link é suficiente, especialmente no celular. Se receber o QR Code em imagem, é possível adicioná-lo em `assets/` e informar seu caminho em `qrImage`.
+
+- **Pré-visualizar antes da ativação:** `https://visionmove.vercel.app/?preview-votacao=1` (mostra o modal com botão desativado).
+- **No acesso normal:** só aparece automaticamente se `enabled` estiver ativado **e** a URL for HTTPS válida.
+- **Frequência:** abre uma vez por sessão de navegação; após fechar, pode ser reaberto pelo botão fixo "Votação pública".
+- **Acessibilidade:** diálogo nativo com foco, botão de fechar, tecla Esc, opção de continuar no site e descrição de saída para link externo.
+- **Resultado:** o visitante vota na página externa do Demoday; este site **não coleta votos**.
+
+Arquivos responsáveis: `index.html` (estrutura), `style.css` (aparência responsiva), `votacao.js` (interação), `votacao-config.js` (chave de ativação e endereço).
+
 ## Privacidade e participação
 
 As mensagens de feedback **não são publicadas no site**. Os formulários enviam os dados por uma API no Vercel para uma função no Supabase; as credenciais privadas de acesso ao banco de dados não fazem parte do código do navegador.
