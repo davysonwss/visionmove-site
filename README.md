@@ -29,7 +29,7 @@ O objetivo é oferecer **apoio complementar à mobilidade**, sem substituir a be
 - **O desafio:** contexto sobre barreiras à mobilidade urbana e acessibilidade.
 - **Nossa solução:** apresentação do funcionamento proposto para o VisionMove.
 - **Protótipo navegável:** acesso à experiência interativa criada no Figma.
-- **Feedback e novidades:** formulários para sugestões privadas e registro de interesse em acompanhar o projeto.
+- **Contato e novidades:** formulário para enviar dúvidas, sugestões e propostas à equipe, além do cadastro para acompanhar o projeto.
 - **Nossa equipe:** apresentação dos integrantes que participam da iniciativa.
 
 O site foi desenvolvido com atenção à **responsividade**, à **navegação por teclado**, à **legibilidade** e à **acessibilidade dos formulários**.
@@ -64,36 +64,11 @@ visionmove-site/
 └── vercel.json               # Configuração da publicação
 ```
 
-## Votação pública do Demoday
-
-O convite de votação do VisionMove já está **visível automaticamente**, inclusive enquanto o endereço oficial ainda não foi divulgado. O botão **VOTAR NO VISIONMOVE** aparece desativado, com uma explicação. Quando houver link, o botão passará a abrir o formulário oficial em outra aba.
-
-Quando receber o link, abra `votacao-config.js` e preencha a propriedade `url`:
-
-```js
-window.VISIONMOVE_VOTACAO = Object.freeze({
-  enabled: true,
-  url: "https://LINK-OFICIAL-DA-VOTACAO",
-  qrImage: "" // opcional: "assets/qr-votacao.png" ou URL HTTPS da imagem
-});
-```
-
-Substitua o exemplo pela URL real do evento. Não é necessário alterar `enabled`, pois já está `true`. Se receber um QR Code como imagem, faça upload em `assets/` e preencha `qrImage`. Se não tiver QR Code, deixe vazio — o botão com link funciona no celular.
-
-- **Abertura automática:** uma vez por sessão de navegação, com ou sem URL, e pode ser reaberto pelo botão fixo "Votação pública".
-- **Ao receber o link:** visitantes que já viram a versão "em breve" podem receber o modal novamente para a votação ativa.
-- **Pré-visualização:** `https://visionmove.vercel.app/?preview-votacao=1` abre o modal mesmo se já foi visto na sessão.
-- **Depois do evento:** alterar `enabled` para `false` para desativar o convite.
-- **Acessibilidade:** diálogo nativo com foco, botão de fechar, tecla Esc, opção de continuar no site e descrição do link externo.
-- **Resultado:** a votação ocorre no serviço externo oficial, e o VisionMove não coleta votos neste site.
-
-Arquivos responsáveis: `index.html`, `equipe.html`, `style.css`, `votacao.js`, `votacao-config.js`.
-
 ## Privacidade e participação
 
-As mensagens de feedback **não são publicadas no site**. Os formulários enviam os dados por uma API no Vercel para uma função no Supabase; as credenciais privadas de acesso ao banco de dados não fazem parte do código do navegador.
+As mensagens enviadas pelo formulário de contato **não são publicadas no site**. Os formulários enviam os dados por uma API no Vercel para uma função no Supabase; as credenciais privadas de acesso ao banco de dados não fazem parte do código do navegador.
 
-O cadastro para receber novidades é opcional e solicita o consentimento do interessado. **Este site não realiza disparos automáticos de e-mails.**
+O e-mail é solicitado no formulário de contato para permitir uma resposta da equipe. O cadastro para receber novidades é opcional e solicita o consentimento do interessado. **Este site não realiza disparos automáticos de e-mails.**
 
 ## Créditos
 
