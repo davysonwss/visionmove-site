@@ -18,11 +18,11 @@
 <header class="header"><div class="container header-inner">
 <a class="brand" href="./#inicio" aria-label="VisionMove — página inicial"><img src="assets/logo-visionmove.png" alt=""></a>
 <nav class="main-nav" aria-label="Navegação principal">
-<a href="#desafio">O desafio</a><a href="#solucao">A solução</a><a href="#experimente">Experimente</a><a href="#participe">Participe</a><a href="equipe">Equipe</a>
+<a href="#desafio">O desafio</a><a href="#solucao">A solução</a><a href="#experimente">Experimente</a><a href="#contato">Contato</a><a href="equipe">Equipe</a>
 </nav>
 
 <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu de navegação"><span class="menu-glyph" aria-hidden="true">☰</span></button>
-</div><nav id="mobile-nav" class="mobile-nav" aria-label="Menu móvel" hidden><a href="#desafio">O desafio</a><a href="#solucao">A solução</a><a href="#experimente">Experimente</a><a href="#participe">Participe</a><a href="equipe">Nossa equipe</a></nav></header>
+</div><nav id="mobile-nav" class="mobile-nav" aria-label="Menu móvel" hidden><a href="#desafio">O desafio</a><a href="#solucao">A solução</a><a href="#experimente">Experimente</a><a href="#contato">Contato</a><a href="equipe">Nossa equipe</a></nav></header>
 <main id="conteudo" tabindex="-1">
 <section class="hero section container" id="inicio" tabindex="-1" aria-labelledby="hero-title">
 <div class="hero-copy"><p class="eyebrow">TECNOLOGIA ASSISTIVA PARA MOBILIDADE URBANA</p>
@@ -72,17 +72,17 @@
 </div></section>
 
 
-<section class="participation section" id="participe" tabindex="-1" aria-labelledby="participation-title">
+<section class="participation section" id="contato" tabindex="-1" aria-labelledby="participation-title">
   <div class="container participation-layout">
     <div class="participation-heading">
-      <p class="eyebrow">FEEDBACK E NOVIDADES</p>
-      <h2 id="participation-title">Sua voz faz a <span>diferença.</span></h2>
-      <p class="muted">Deixe uma sugestão para a equipe ou acompanhe as próximas etapas do projeto.</p>
+      <p class="eyebrow">ENTRE EM CONTATO</p>
+      <h2 id="participation-title">Vamos <span>conversar?</span></h2>
+      <p class="muted">Tem alguma dúvida, sugestão ou interesse em colaborar com o VisionMove? Envie uma mensagem diretamente para nossa equipe.</p>
     </div>
     <div class="participation-actions">
       <button class="participation-trigger" type="button" data-open-participation="feedback" aria-haspopup="dialog" aria-controls="feedback-dialog">
         <span class="participation-trigger-icon" aria-hidden="true"><svg class="participation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L3 21l4.9-1z"/></svg></span>
-        <span class="participation-trigger-copy"><strong>Enviar feedback</strong><small>Sua opinião é privada</small></span>
+        <span class="participation-trigger-copy"><strong>Fale com a equipe</strong><small>Envie uma mensagem ao VisionMove</small></span>
       </button>
       <button class="participation-trigger" type="button" data-open-participation="interessados" aria-haspopup="dialog" aria-controls="interessados-dialog">
         <span class="participation-trigger-icon" aria-hidden="true"><svg class="participation-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
@@ -95,19 +95,19 @@
   <div class="participation-modal-content">
     <div class="participation-modal-header">
       <div>
-        <p class="eyebrow">SUA OPINIÃO IMPORTA</p>
-        <h2 id="feedback-title">Enviar feedback</h2>
-        <p class="muted" id="feedback-info">Compartilhe ideias, dúvidas ou sugestões. Sua mensagem será vista somente pela equipe.</p>
+        <p class="eyebrow">CONTATO VISIONMOVE</p>
+        <h2 id="feedback-title">Fale com a equipe</h2>
+        <p class="muted" id="feedback-info">Envie suas dúvidas, ideias ou propostas. Sua mensagem será recebida de forma privada pela equipe.</p>
       </div>
-      <button type="button" class="participation-close" data-close-participation aria-label="Fechar feedback">×</button>
+      <button type="button" class="participation-close" data-close-participation aria-label="Fechar formulário de contato">×</button>
     </div>
     <form data-visionmove-form="feedback" novalidate>
           <div class="participation-field"><label for="feedback-nome">Nome <span class="optional">(opcional)</span></label><input id="feedback-nome" type="text" name="nome" maxlength="100" autocomplete="name" placeholder="Como podemos chamar você?"></div>
-          <div class="participation-field"><label for="feedback-email">E-mail <span class="optional">(opcional)</span></label><input id="feedback-email" type="email" name="email" maxlength="254" autocomplete="email" placeholder="voce@exemplo.com"></div>
-          <div class="participation-field"><label for="feedback-mensagem">Sua mensagem</label><textarea id="feedback-mensagem" name="mensagem" rows="5" minlength="10" maxlength="2000" required placeholder="Conte o que achou do VisionMove e como podemos melhorar."></textarea></div>
+          <div class="participation-field"><label for="feedback-email">E-mail para contato</label><input id="feedback-email" type="email" name="email" maxlength="254" autocomplete="email" placeholder="voce@exemplo.com" required></div>
+          <div class="participation-field"><label for="feedback-mensagem">Sua mensagem</label><textarea id="feedback-mensagem" name="mensagem" rows="5" minlength="10" maxlength="2000" required placeholder="Escreva sua dúvida, sugestão ou proposta para a equipe."></textarea></div>
           <div class="participation-trap" aria-hidden="true"><label for="feedback-site">Deixe este campo vazio</label><input type="text" id="feedback-site" name="website" tabindex="-1" autocomplete="off"></div>
-          <p class="participation-note">Os dados enviados serão usados apenas para analisar o feedback e, se você informar um e-mail, responder à sua mensagem. O envio não inscreve você na lista de novidades.</p>
-          <button class="button primary" type="submit">Enviar feedback</button>
+          <p class="participation-note">Usaremos sua mensagem e seu e-mail apenas para analisar o contato e possibilitar uma resposta da equipe. O envio não inscreve você na lista de novidades.</p>
+          <button class="button primary" type="submit">Enviar mensagem</button>
           <p class="participation-status" role="status" aria-live="polite" data-form-status></p>
         </form>
   </div>
@@ -134,30 +134,6 @@
   </div>
 </dialog>
 </main>
-<!-- Modal de convite à votação do Demoday; link oficial configurável em votacao-config.js. -->
-<dialog id="demoday-voting-dialog" class="demoday-voting-dialog" aria-labelledby="demoday-voting-title" aria-describedby="demoday-voting-description">
-  <div class="demoday-voting-content">
-    <button class="demoday-voting-close" type="button" data-close-demoday-voting aria-label="Fechar aviso de votação">×</button>
-    <img class="demoday-voting-logo" src="assets/logo-visionmove.png" alt="VisionMove">
-    <p class="demoday-voting-kicker">VISIONMOVE · DEMODAY</p>
-    <h2 id="demoday-voting-title">Juntos por uma mobilidade mais acessível.</h2>
-    <p id="demoday-voting-description" class="demoday-voting-description">O VisionMove está participando do Demoday! Seu voto pode ajudar a impulsionar uma tecnologia que busca promover mais autonomia e inclusão para pessoas com deficiência visual.</p>
-    <div class="demoday-voting-details">
-      <div class="demoday-voting-impact">
-        <svg class="demoday-voting-impact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6l1.2 1.2L12 21l7.6-7.6 1.2-1.2a5.4 5.4 0 0 0 0-7.6Z"/></svg>
-        <strong>Sua participação faz a diferença!</strong>
-      </div>
-      <div class="demoday-voting-qr-area" id="demoday-voting-qr-area" hidden>
-        <img id="demoday-voting-qr" alt="QR Code para acessar a votação pública do Demoday" width="132" height="132">
-        <span>Ou escaneie o QR Code</span>
-      </div>
-    </div>
-    <a id="demoday-voting-link" class="button primary demoday-voting-link" href="" target="_blank" rel="noopener noreferrer" hidden>VOTAR NO VISIONMOVE <span class="sr-only">(abre em nova aba)</span></a>
-    <button id="demoday-voting-unavailable" class="button primary demoday-voting-unavailable" type="button" disabled hidden>VOTAR NO VISIONMOVE</button>
-    <button class="demoday-voting-later" type="button" data-close-demoday-voting>Agora não, continuar no site</button>
-  </div>
-</dialog>
-<button id="demoday-voting-reopen" class="demoday-voting-reopen" type="button" aria-haspopup="dialog" aria-controls="demoday-voting-dialog" hidden>Votação pública</button>
-<footer class="footer"><div class="container footer-grid"><div><a href="./#inicio" aria-label="VisionMove, voltar à página inicial"><img class="footer-logo" src="assets/logo-visionmove.png" alt=""></a><p>Tecnologia assistiva para mobilidade urbana.<br>Aplicativo em desenvolvimento.</p></div><div><h3>Navegação</h3><a href="./#inicio">Início</a><a href="./#desafio">O desafio</a><a href="./#solucao">Nossa solução</a></div><div><h3>Explore</h3><a href="./#experimente">Protótipo e aplicativo</a><a href="./#participe">Participe</a><a href="equipe">Nossa equipe</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> VisionMove</span><span class="footer-bottom-note">Desenvolvido com propósito, tecnologia e inclusão.<span class="footer-credit">Site desenvolvido por <a href="https://www.linkedin.com/in/davysonwss/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Davyson William (abre em nova aba)">Davyson William</a>.</span></span></div></footer>
-<script src="site.js" defer></script><script src="participacao.js" defer></script><script src="votacao-config.js" defer></script><script src="votacao.js" defer></script>
+<footer class="footer"><div class="container footer-grid"><div><a href="./#inicio" aria-label="VisionMove, voltar à página inicial"><img class="footer-logo" src="assets/logo-visionmove.png" alt=""></a><p>Tecnologia assistiva para mobilidade urbana.<br>Aplicativo em desenvolvimento.</p></div><div><h3>Navegação</h3><a href="./#inicio">Início</a><a href="./#desafio">O desafio</a><a href="./#solucao">Nossa solução</a></div><div><h3>Explore</h3><a href="./#experimente">Protótipo e aplicativo</a><a href="./#contato">Contato</a><a href="equipe">Nossa equipe</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> VisionMove</span><span class="footer-bottom-note">Desenvolvido com propósito, tecnologia e inclusão.<span class="footer-credit">Site desenvolvido por <a href="https://www.linkedin.com/in/davysonwss/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Davyson William (abre em nova aba)">Davyson William</a>.</span></span></div></footer>
+<script src="site.js" defer></script><script src="participacao.js" defer></script>
 </body></html>
