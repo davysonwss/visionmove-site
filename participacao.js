@@ -65,7 +65,7 @@
         if (!response.ok) throw new Error(result.message || "Não foi possível enviar. Tente novamente.");
         status.dataset.state = "success";
         status.textContent = tipo === "feedback"
-          ? "Feedback recebido! Obrigado por contribuir com o VisionMove."
+          ? "Mensagem recebida! Obrigado por entrar em contato com o VisionMove."
           : "Inscrição registrada! Obrigado por acompanhar o VisionMove.";
         form.reset();
       } catch (error) {
