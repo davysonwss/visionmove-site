@@ -137,3 +137,48 @@ body.participation-modal-open{overflow:hidden}
 /* Links de texto: sublinhado permanente para identificação sem depender de ícones. */
 .stat a,.footer-grid a:not(:has(img)){text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-skip-ink:auto}
 .stat a:hover,.stat a:focus-visible,.footer-grid a:not(:has(img)):hover,.footer-grid a:not(:has(img)):focus-visible{text-decoration:underline;text-decoration-thickness:2px}
+
+/* Conquista VisionMove: segundo lugar no Demoday do KickOff 2026. */
+.achievement-banner{
+  display:flex;align-items:center;gap:22px;
+  margin-top:24px;padding:19px 27px;
+  border:1px solid rgba(175,199,223,.5);border-radius:20px;
+  background:linear-gradient(107deg,#123b60 0%,#0d2d4e 55%,#08243d 100%);
+  box-shadow:0 14px 34px rgba(0,9,21,.16);
+}
+.achievement-medal{
+  width:72px;height:72px;flex:0 0 72px;
+  position:relative;display:grid;place-items:center;
+  border:3px solid #dce9f6;border-radius:50%;
+  background:linear-gradient(145deg,#f3f8fd 2%,#a4bfd5 53%,#66869e 100%);
+  color:#09233c;box-shadow:0 0 0 5px rgba(175,199,223,.10),inset 0 0 0 3px rgba(255,255,255,.38);
+}
+.achievement-medal::before,.achievement-medal::after{
+  content:"";position:absolute;top:-13px;width:15px;height:20px;
+  background:#00a6e9;z-index:-1;border:1px solid #5dbced;
+}
+.achievement-medal::before{left:15px;transform:rotate(-20deg)}
+.achievement-medal::after{right:15px;transform:rotate(20deg)}
+.achievement-medal span{font-size:30px;font-weight:900;line-height:1;letter-spacing:-.05em}
+.achievement-copy{min-width:0;flex:1}
+.achievement-eyebrow{color:#b2ebff;font-size:12px;font-weight:800;letter-spacing:.15em;margin:0 0 5px}
+.achievement-title{color:#f1f8ff;font-size:clamp(17px,1.85vw,23px);font-weight:500;line-height:1.4;margin:0}
+.achievement-title strong{font-weight:900;color:#fff}
+.achievement-spark{width:33px;height:33px;flex:0 0 33px;color:#a9d7f4;opacity:.75}
+@media(max-width:640px){
+  .achievement-banner{gap:15px;margin-top:18px;padding:17px 16px;border-radius:16px}
+  .achievement-medal{width:58px;height:58px;flex-basis:58px}
+  .achievement-medal span{font-size:25px}
+  .achievement-eyebrow{font-size:10px;letter-spacing:.10em}
+  .achievement-title{font-size:16px}
+  .achievement-spark{display:none}
+}
+@media(max-width:380px){
+  .achievement-banner{gap:12px}
+  .achievement-medal{width:52px;height:52px;flex-basis:52px}
+  .achievement-medal span{font-size:23px}
+  .achievement-title{font-size:15px}
+}
+@media(forced-colors:active){
+  .achievement-banner,.achievement-medal{border:2px solid CanvasText}
+}
