@@ -146,39 +146,25 @@ body.participation-modal-open{overflow:hidden}
   background:linear-gradient(107deg,#123b60 0%,#0d2d4e 55%,#08243d 100%);
   box-shadow:0 14px 34px rgba(0,9,21,.16);
 }
-.achievement-medal{
-  width:72px;height:72px;flex:0 0 72px;
-  position:relative;display:grid;place-items:center;
-  border:3px solid #dce9f6;border-radius:50%;
-  background:linear-gradient(145deg,#f3f8fd 2%,#a4bfd5 53%,#66869e 100%);
-  color:#09233c;box-shadow:0 0 0 5px rgba(175,199,223,.10),inset 0 0 0 3px rgba(255,255,255,.38);
+.achievement-award{
+  display:block;width:112px;height:112px;flex:0 0 112px;
+  overflow:visible;filter:drop-shadow(0 6px 11px rgba(0,0,0,.24));
 }
-.achievement-medal::before,.achievement-medal::after{
-  content:"";position:absolute;top:-13px;width:15px;height:20px;
-  background:#00a6e9;z-index:-1;border:1px solid #5dbced;
-}
-.achievement-medal::before{left:15px;transform:rotate(-20deg)}
-.achievement-medal::after{right:15px;transform:rotate(20deg)}
-.achievement-medal span{font-size:30px;font-weight:900;line-height:1;letter-spacing:-.05em}
 .achievement-copy{min-width:0;flex:1}
 .achievement-eyebrow{color:#b2ebff;font-size:12px;font-weight:800;letter-spacing:.15em;margin:0 0 5px}
 .achievement-title{color:#f1f8ff;font-size:clamp(17px,1.85vw,23px);font-weight:500;line-height:1.4;margin:0}
 .achievement-title strong{font-weight:900;color:#fff}
-.achievement-spark{width:33px;height:33px;flex:0 0 33px;color:#a9d7f4;opacity:.75}
 @media(max-width:640px){
   .achievement-banner{gap:15px;margin-top:18px;padding:17px 16px;border-radius:16px}
-  .achievement-medal{width:58px;height:58px;flex-basis:58px}
-  .achievement-medal span{font-size:25px}
+  .achievement-award{width:84px;height:84px;flex-basis:84px}
   .achievement-eyebrow{font-size:10px;letter-spacing:.10em}
   .achievement-title{font-size:16px}
-  .achievement-spark{display:none}
 }
 @media(max-width:380px){
   .achievement-banner{gap:12px}
-  .achievement-medal{width:52px;height:52px;flex-basis:52px}
-  .achievement-medal span{font-size:23px}
+  .achievement-award{width:68px;height:68px;flex-basis:68px}
   .achievement-title{font-size:15px}
 }
 @media(forced-colors:active){
-  .achievement-banner,.achievement-medal{border:2px solid CanvasText}
+  .achievement-banner{border:2px solid CanvasText}
 }
