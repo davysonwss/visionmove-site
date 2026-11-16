@@ -24,6 +24,10 @@ O objetivo é oferecer **apoio complementar à mobilidade**, sem substituir a be
 
 > **Status do projeto:** o aplicativo está em desenvolvimento. O protótipo e os exemplos apresentados no site demonstram a experiência planejada; não representam uma solução de detecção em tempo real já validada.
 
+## Reconhecimento no Demoday 2026
+
+O VisionMove conquistou o **2º lugar no Demoday do KickOff do Porto Digital 2026**. A conquista está destacada na página inicial e na página da equipe.
+
 ## O que você encontra no site
 
 - **O desafio:** contexto sobre barreiras à mobilidade urbana e acessibilidade.
